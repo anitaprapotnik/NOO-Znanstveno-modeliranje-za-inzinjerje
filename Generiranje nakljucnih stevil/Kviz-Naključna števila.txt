@@ -1,0 +1,96 @@
+KAJ JE TEMELJNA ZNAČILNOST ENAKOMERNE PORAZDELITVE, PO KATERI OSNOVNI ALGORITEM V PROGRAMSKIH JEZIKIH GENERIRA ŠTEVILA MED 0 IN 1?  
+A) Verjetnost izbire števila v kateremkoli podintervalu je odvisna le od širine tega podintervala.
+B) Vsako naslednje generirano število je večje od prejšnjega.
+C) Algoritem generira le števila, ki imajo končno število decimalnih mest.
+D) Verjetnost, da je število blizu 0,5 je največja.
+ANSWER: A
+KAJ SE ZGODI, ČE UKAZ `NUMPY.RANDOM.RAND()` POKLIČETE BREZ ARGUMENTOV?  
+A) Vrne eno samo (skalarno) število med 0 in 1. 
+B) Vrne prazno polje (array) dolžine 0.
+C) Program javi napako, ker je argument obvezen.
+D) Uporabi prevzeto število 100 in vrne 100 številk.
+ANSWER: A
+KATERI DVE KLJUČNI LASTNOSTI MORA IMETI DOBER ALGORITEM ZA GENERIRANJE PSEVDONAKLJUČNIH ŠTEVIL?
+A) Generirana števila slediju Gaussovi porazdelitvi in so vedno pozitivna.
+B) Algoritem je zelo hiter in porabi malo pomnilnika.
+C) Števila so porazdeljena po enakomerni porazdelitvi in so nekolerirana.
+D) Zaporedje je kratko in hitro ponovljivo.
+ANSWER: C
+KAJ JE NAJPOGOSTEJŠI VIR, KI GA RAČUNALNIK UPORABI ZA DOLOČITEV ZAČETNEGA SEMENA, ČE GA UPORABNIK NE DOLOČI ROČNO?
+A) Prvo število, ki ga uporabnik vnese preko tipkovnice.
+B) Trenutni sistemski čas, na primer odčitek notranje ure v milisekundah.
+C) Vrednost števila Pi.
+D) Vnaprej določeno število, ki je enako za vse računalnike.
+ANSWER: B
+KATERE TRI PARAMETRE SPREJME FUNKCIJA `NUMPY.RANDOM.NORMAL()` ZA GENERIRANJE GAUSSOVO PORAZDELJENIH ŠTEVIL?
+A) Število poiskusov, verjetnost uspeha i število števil. 
+B) Povprečno vrednost, standardni odklon in število števil. 
+C) Stopnjo, obliko in število števil. 
+D) Spodnjo mejo, zgornjo mejo in število števil.
+ANSWER: B
+KATERA OD NAŠTETIH METOD UPORABLJA VELIKO ŠTEVILO NAKLJUČNIH ŠTEVIL ZA REŠEVANJE DETERMINISTIČNIH PROBLEMOV, NA PRIMER ZA DOLOČANJE POVRŠINE NEPRAVILNEGA LIKA?
+A) Optimizacija z naključnim iskanjem.
+B) Analiza meritev in napak.
+C) Monte Carlo metode.
+D) Inverzna tranformacijska metoda.
+ANSWER: C
+KDAJ JE PRIPOROČLJIVO ODSTRANITI UKAZ `NUMPY.RANDOM.SEED()` IZ KONČNE RAZLIČICE PROGRAMA?  
+A) Ko je progam preiskušen in želimo, da ob vsakem zagonu stvari novo, neponovljivo zaporedje naključnih števil. 
+B) Ko program deluje prepočasno, saj določanje semena upočasni izvajanje.
+C) Samo takrat, ko uporabljamo porazdelitve, ki niso enakomerne, kot na primer Gaussova.
+D) Nikoli, saj vedno zagotavlja boljšo naključnost in delovanje programa.
+ANSWER: A
+KATERA OD NASLEDNJIH TRDITEV NAJBOLJE POVZEMA UPORABO NAKLJUČNIH ŠTEVIL PRI SIMULACIJAH?  
+A) Uporabljajo se za modeliranje in raziskovanje pojavov, pri katerih ima naključnost ključno vlogo.
+B) Služijo isključno iskanju optimalne kombinacije parametrov v tehničnih sistemih.
+C) Njihov glavni namen je ocena skupne merilne napake v kompleksnih eksperimentih.
+D) Uporabljajo se za reševanje analitično teških, a determinističnih problemov. 
+ANSWER: A
+ZAKAJ BI PROGRAMER V FAZI TESTIRANJA PROGRAMA UPORABIL UKAZ `NUMPY.RANDOM.SEED(N)`?
+A) Poveča hitrost generiranja naključnih številk, saj računalniku ni treba iskati novega semena. 
+B) Za generiranje bolj kakovostnih in resničnih  naključnih števil.
+C) Da bi zagotovili, da program ob vsakem zagonu ustvari identično zaporednje naključnih števil.
+D) Da bi omejili obseg generiranih števil med vrednostmi med 0 in N.
+ANSWER: C
+IZRAZ 'PSEVDONAKLJUČNA ŠTEVILA' SE UPORABLJA, KER RAČUNALNIK GENERIRA ŠTEVILA NA PODLAGI DETERMINISTIČNEGA PROCESA. KAJ TO POMENI?
+A) Računalnik uporablja kvantnomehanske procese za zagotavljanje prave naključnosti.
+B) Števila so le približki realnih števil in niso popolnoma natančna.
+C) Zaporednje števil je vnaprej določeno z začetno vrednostjo, imenovano seme.
+D) Zaporednja števil se začnejo ponavljati že po nekaj tisoč generiranih vrednostih.
+ANSWER: C
+KATERI OD NAŠTETIH UKAZOV V KNJIŽNICI NUMPY BI UPORABILI ZA GENERIRANJE POLJA DESETIH ŠTEVIL, KI SLEDIJO BINOMSKI PORAZDELITVI?
+A) numpy.random.normal(n,p,10)
+B) numpy.random.binomial(n,p,10)
+C) numpy.random.poisson(10)
+D) numpy.random.rand(10)
+ANSWER: B
+ZA KATERO OD NASLEDNJIH NALOG JE UPORABA MONTE CARLO METOD NAJBOLJ PRIMERNA?
+A) Reševanje sistema linearnih enačb.
+B) Razvršanje podatkov v podatkovni bazi.
+C) Iskanje določene besede v besedilu.
+D) Izračun vrednosti števila pi s pomočjo naključnega streljanja točk v kvadrat.
+ANSWER: D
+PRI ANALIZI MERITEV V ZAHTEVNEM EKSPERIMENTU SE POGOSTO UPORABLJA SIMULACIJA. KAKŠEN JE GLAVNI NAMEN DODAJANJA NAKLJUČNEGA ŠUMA MERITVAM V TAKŠNI SIMULACIJI?
+A) Pospešiti zbiranje podatkov med samim eksperimentom.
+B) Oceniti skupno negotovost meritve, ki izhaja iz napak posameznih eksperimentov.
+C) Popolnoma odstraniti meritvene napake iz končnih rezultatov. 
+D) Preveriti, ali merilni inštrumenti delujejo pravilno.
+ANSWER: B
+INVERZNA TRANSFORMACIJSKA METODA OMOGOČA GENERIRANJE ŠTEVIL PO RAZLIČNIH PORAZDELITVAH. NA KATERI MATEMATIČNI FUNKCIJI TEMELJI TA METODA?
+A) Standardnem odklonu porazdelitve.
+B) Funkciji gotote verjetnosti (PDF).
+C) Karakteristični funkciji porazdelitve.
+D) Kumulativni porazdelitveni funkciji (CDF).
+ANSWER: D
+PRI OPTIMIZACIJI SE POGOSTO UPORABLJA PRISTOP, KJER SE TRENUTNI REŠITVI DODA MAJHNA NAKLJUČNA SPREMEMBA, KI SE OBDRŽI LE, ČE IZBOLJŠA REZULTAT. ZAKAJ JE TA PRISTOP BOLJŠI OD 'SLEPEGA' NAKLJUČNEGA ISKANJA?
+A) Ker vedno najde globalni optimum in se nikoli ne ustavi v lokalnem.
+B) Ker je računsko manj zahteven on slepega iskanja.
+C) Ker ne potrebuje začetne rešitve za začetek reševanja.
+D) Ker sistematično raziskuje okolico dobre rešitve, namesto da bi iskal po celotnem prostoru.
+ANSWER: D
+KATERI POJAV BI NAJVERJETNEJE MODELIRALI S SIMULACIJO, KI UPORABLJA NAKLJUČNA ŠTEVILA?
+A) Delovanje logičnih vrat v računalniškem procesorju.
+B) Izračun vsote prvih 100 števil.
+C) Gibanje planeta okoli sonca po Newtonovih pravilih.
+D) Jedrski razpad, kjer je čas razpada posameznega atoma nepredvidljiv.
+ANSWER: D
