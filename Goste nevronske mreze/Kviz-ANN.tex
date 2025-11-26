@@ -1,0 +1,209 @@
+\documentclass[12pt]{exam}
+\usepackage[slovene]{babel}
+\usepackage{graphicx}
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage{pgfplots}
+
+%\usepackage{arev}
+%\usepackage[T1]{fontenc}
+
+
+%\renewcommand*\rmdefault{iwona}
+
+%\renewcommand*{\familydefault}{\rmdefault}
+%\renewcommand*{\familydefault}{\sfdefault}
+%\renewcommand*{\familydefault}{\ttdefault}
+
+%\textwidth 16 true cm
+%\textheight 27 true cm
+%\oddsidemargin 30 true mm
+%\evensidemargin 20 true mm
+%\voffset= -18 true mm
+%\hoffset= -25 true mm
+
+
+\printanswers
+
+\begin{document}
+\pagestyle{empty}
+
+\section*{Kviz: ANN}
+\begin{questions}
+
+\question Kateri od naslednjih opisov najbolje povzema hierarhični odnos med umetno inteligenco (UI), nevronskimi mrežami in velikimi jezikovnimi modeli (LLM), kot je ChatGPT, glede na priloženo besedilo?
+\begin{choices}
+\choice Nevronske mreže so se razvile iz velikih jezikovnih modelov in predstavljajo osnovo za umetno inteligenco.
+\choice Umetna inteligenca je zgolj teoretični koncept, medtem ko so nevronske mreže in LLM praktične implementacije.
+\choice UI, nevronske mreže in LLM so tri medsebojno ločena področja raziskav.
+\CorrectChoice Veliki jezikovni modeli so podkategorija nevronskih mrež, te pa so podkategorija znotraj širšega področja umetne inteligence.
+\end{choices}
+
+\question Model za klasifikacijo je za pravilen razred (drugi od treh) napovedal verjetnost 0.2. Vrednost križne entropije je bila \(H=-\log(0.2)=1.609\). Kaj bi se zgodilo z vrednostjo križne entropije, če bi model za isti primer napovedal verjetnost 0.8 za pravilen razred?
+\begin{choices}
+\CorrectChoice Vrednost križne entropije bi se zmanjšala.
+\choice Vrednost križne entropije bi se povečala.
+\choice Vrednost križne entropije bi ostala enaka.
+\choice Vrednost križne entropije bi postala negativna.
+\end{choices}
+
+\question Katera trditev o arhitekturi nevronske mreže je pravilna glede na besedilo?
+\begin{choices}
+\choice V osnovni (gosti) arhitekturi je vsako vozlišče povezano le z enim vozliščem sosednje plasti.
+\choice Število skritih plasti in število vozlišč v njih je točno določeno s številom vhodnih plasti.
+\choice Uteži so predpisani nevronom, odmiki pa povezavam med njimi.
+\CorrectChoice Nevronska mreža mora imeti vsaj eno vhodno, eno skrito in eno izhodno plast.
+\end{choices}
+
+\question Kateri optimizacijski algoritem velja za enega najpogosteje uporabljenih, saj dobro deluje v večini primerov brez veliko prilagajanja in izračunava povprečje gradientov ter njihovih kvadratov?
+\begin{choices}
+\choice RMSProp
+\choice Naključni gradientni spust (SGD)
+\choice AdaGrad
+\CorrectChoice Adam
+\end{choices}
+
+\question Kaj je glavna razlika med stroškovno funkcijo (npr. MSE) in metriko (npr. natančnost)?
+\begin{choices}
+\choice Ni nobene razlike, gre za sopomenki, ki se uporabljata za merjenje uspešnosti modela.
+\choice Stroškovna funkcija ima vedno vrednost med 0 in 1, medtem ko metrika lahko zavzame poljubno vrednost.
+\choice Metrika se uporablja za regresijske probleme, stroškovna funkcija pa za klasifikacije.
+\CorrectChoice Stroškovna funkcija se uporablja za prilagajanje uteži med učenjem, medtem ko metrika služi le za končno oceno uspešnosti modela.
+\end{choices}
+
+\question V besedilu je omenjena analogija za lažje razumevanje aktivacijskih funkcij. S čim lahko sestavimo poljubno krivuljo, če nam to ne uspe s kombinacijo celih premic?
+\begin{choices}
+\CorrectChoice S kombinacijo poltrakov.
+\choice S kombinacijo točk.
+\choice S kombinacijo sinusnih funkcij.
+\choice S kombinacijo parabol.
+\end{choices}
+
+\question Kaj je "batch size" v kontekstu učenja nevronske mreže?
+\begin{choices}
+\choice Število epoh potrebnih za konvergenco modela.
+\choice Skupno število podatkov, ki so na voljo za učenje.
+\choice Število nevronov v največji skriti plasti.
+\CorrectChoice Velikost vzorca (število podatkov), ki gre skozi model, preden se uteži prilagodijo.
+\end{choices}
+
+\question Kdaj je umetna inteligenca postala samostojno raziskovalno področje znotraj znanstvene sfere?
+\begin{choices}
+\choice Po letu 2010, z vzponom velikih jezikovnih modelov.
+\choice V osemdesetih letih, z razvojem nevronskih mrež.
+\CorrectChoice Leta 1956.
+\choice V 19. stoletju z idejami Charlesa Babbagea.
+\end{choices}
+
+\question Kaj je namen normalizacije zveznih vhodnih podatkov pred učenjem nevronske mreže?
+\begin{choices}
+\CorrectChoice Preslikava podatkov v manjši interval (npr. od 0 do 1), da imajo vsi vhodi primerljivo vrednost in se preprečijo numerične težave.
+\choice Pretvorba podatkov v kategorije z uporabo one-hot kodiranja.
+\choice Odstranitev izstopajočih vrednosti (outlierjev) iz nabora podatkov.
+\choice Povečanje števila učnih vzorcev, za boljše učenje.
+\end{choices}
+
+\question Kateri problem bi bil primeren za reševanje z nevronsko mrežo, kot je opisano v primerih uporabe v besedilu?
+\begin{choices}
+\choice Shranjevanje velikih količin podatkov o strankah v struktuirano bazo podatkov.
+\choice Izračun vsote prvih 1000 praštevil.
+\choice Razvrščanje seznama imen po abecedi.
+\CorrectChoice Napovedovanje verjetnosti prometne nesreče na križišču na podlagi gostote prometa, vidljivosti in lastnosti ceste.
+\end{choices}
+
+\question Če za klasifikacijski problem z več razredi uporabimo "one-hot" kodiranje za prave vrednosti, katero stroškovno funkcijo moramo izbrati?
+\begin{choices}
+\CorrectChoice Križno entropijo (cross-entropy)
+\choice Redko križno entropijo (sparse cross-entropy)
+\choice Adam
+\choice Povprečno kvadratno napako (MSE)
+\end{choices}
+
+\question Zakaj je uporaba aktivacijskih funkcij, kot je ReLU, ključnega pomena v arhitekturi nevronskih mrež?
+\begin{choices}
+\CorrectChoice Ker v mrežo vnesejo nelinearnosti, kar omogoča učenje kompleksnih vzorcev, ki jih z linearnimi kombinacijami ne bi mogli zajeti.
+\choice Za določitev začetnih vrednosti uteži in odmikov v mreži.
+\choice Za zmanjšanje števila potrebnih nevronov v skritih plasteh in s tem poenostavitev arhitekture.
+\choice Za normalizacijo vhodnih podatkov, da imajo vsi primerljivo vrednost.
+\end{choices}
+
+\question Če je natančnost modela na validacijskih podatkih precej nižja kot na učnih podatkih, je to znak za:
+\begin{choices}
+\choice Premalo epoh učenja.
+\CorrectChoice Prekomerno prilagajanje (overfitting).
+\choice Napačno izbiro stroškovne funkcije.
+\choice Uspešno posploševanje modela.
+\end{choices}
+
+\question Če nevronska mreža napoveduje ceno nepremičnine (zvezni podatek), katera stroškovna funkcija je najpogosteje uporabljena?
+\begin{choices}
+\choice Križna entropija
+\choice Redka križna entropija
+\CorrectChoice Povprečna kvadratna napaka
+\choice Funkcija ReLU
+\end{choices}
+
+\question Pojav, ko se nevronska mreža "na pamet nauči" učne podatke in zato slabo posplošuje na nove, nevidene podatke, imenujemo:
+\begin{choices}
+\CorrectChoice Prekomerno prilagajanje (overfitting)
+\choice Validacija
+\choice Gradientni spust
+\choice Normalizacija
+\end{choices}
+
+\question Kaj se zgodi, če je hitrost učenja (learning rate) v procesu optimizacije nastavljena premajhno?
+\begin{choices}
+\CorrectChoice Učenje bo zelo počasno in bo morda obtičalo v lokalnem minimumu.
+\choice Uteži in odmiki se sploh ne bodo posodabljali.
+\choice Model se bo takoj prekomerno prilagodil (overfitting).
+\choice Model bo postal nestabilen in napaka bo močno nihala.
+\end{choices}
+
+\question V vhodni plasti nevronske mreže mora biti točno toliko vozlišč, kolikor je:
+\begin{choices}
+\choice Epoh učenja.
+\choice Skritih plasti v mreži.
+\CorrectChoice Vhodnih (neodvisnih) podatkov ali značilnosti.
+\choice Izhodnih spremenljivk, ki jih želimo napovedati.
+\end{choices}
+
+\question Kakšna je vrednost izraza \( a_{12}=I_1 w_{1,1}+I_2 w_{1,2}+I_3 w_{1,3}+b_{1} \), ki predstavlja izračun v nevronu prve skrite plasti?
+\begin{choices}
+\choice Napaka napovedi, izračunana s povprečno kvadratno napako.
+\choice Produkt vseh vhodnih vrednosti in vseh uteži.
+\choice Rezultat aktivacijske funkcije ReLU.
+\CorrectChoice Vsota produktov vhodnih vrednosti in uteži, prišteta odmiku tega nevrona.
+\end{choices}
+
+\question Kaj je glavna pomanjkljivost uporabe celoštevilskega kodiranja (npr. rdeča → 1, črna → 2, rumena → 3) za kategorialne podatke, ki nimajo naravnega vrstnega reda?
+\begin{choices}
+\choice Postopek je računsko prezahteven za velike nabore podatkov.
+\choice Zahteva preveč pomnilnika v primerjavi z one-hot kodiranjem.
+\CorrectChoice Modelu umetno nakazuje zaporedje ali velikostni odnos, ki v resnici ne obstaja.
+\choice Ni ga mogoče uporabiti za probleme z več kot dvema kategorijama.
+\end{choices}
+
+\question Kakšen je namen validacijskega nabora podatkov v procesu učenja nevronske mreže?
+\begin{choices}
+\choice Da se na njem neposredno prilagajajo uteži in odmiki med vsako epoho.
+\choice Da se z njimi določi optimalno število skritih plasti pred začetkom učenja.
+\CorrectChoice Da se oceni, kako se bo model obnesel na novih, še nevidenih podatkih.
+\choice Da se vanj shranijo najboljše uteži po vsaki epohi.
+\end{choices}
+
+\end{questions}
+
+\section*{Naloga: ANN}
+
+
+\begin{enumerate}
+\item Zgenerirajte tabelo s 10.000 vrsticami tako da bodo vrednosti v stolpcih A, B in C naključno generirane, vrednosti v stolpcu D pa pridobite z enačbo $2A^2+3BC$.
+\item Ustvarite nevronsko mrežo s tremi skritimi plastmi, ki v vsaki skriti plasti ima 32 vozlišč in jo natrenirajte na zgoraj generiranih podatkih.
+\item {\em Dodatno:} preiskusite različne optimizatorje, aktivacijske funkcije, stroškovne funkcije in matrike in zapišite opažanja.
+\item {\em Dodatno:} Stolpcu D dodajte majhno Gaussovo napako in poglejte kako se natančnost modela spreminja s spreminjanjem standardne deviacije te napake.
+\end{enumerate}
+    
+  
+   \end{document}
+
