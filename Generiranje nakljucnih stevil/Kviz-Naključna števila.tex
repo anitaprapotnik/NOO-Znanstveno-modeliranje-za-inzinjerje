@@ -1,0 +1,183 @@
+\documentclass[12pt]{exam}
+\usepackage[slovene]{babel}
+\usepackage{graphicx}
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage{pgfplots}
+
+%\usepackage{arev}
+%\usepackage[T1]{fontenc}
+
+
+%\renewcommand*\rmdefault{iwona}
+
+%\renewcommand*{\familydefault}{\rmdefault}
+%\renewcommand*{\familydefault}{\sfdefault}
+%\renewcommand*{\familydefault}{\ttdefault}
+
+%\textwidth 16 true cm
+%\textheight 27 true cm
+%\oddsidemargin 30 true mm
+%\evensidemargin 20 true mm
+%\voffset= -18 true mm
+%\hoffset= -25 true mm
+
+
+\printanswers
+
+\begin{document}
+\pagestyle{empty}
+
+\section*{Kviz: Naključna števila}
+
+\begin{questions}
+
+\question Kaj je temeljna značilnost enakomerne porazdelitve, po kateri osnovni algoritem v programskih jezikih generira števila med 0 in 1?
+\begin{choices}
+\correctchoice Verjetnost izbire števila v kateremkoli podintervalu je odvisna le od širine tega podintervala.
+\choice Vsako naslednje generirano število je večje od prejšnjega.
+\choice Algoritem generira le števila, ki imajo končno število decimalnih mest.
+\choice Verjetnost, da je število blizu 0,5, je največja.
+\end{choices}
+
+\question Kaj se zgodi, če ukaz \verb|numpy.random.rand()| pokličete brez argumentov?
+\begin{choices}
+\correctchoice Vrne eno samo (skalarno) število med 0 in 1.
+\choice Vrne prazno polje (array) dolžine 0.
+\choice Program javi napako, ker je argument obvezen.
+\choice Uporabi privzeto število 100 in vrne 100 številk.
+\end{choices}
+
+\question Kateri dve ključni lastnosti mora imeti dober algoritem za generiranje psevdonaključnih števil?
+\begin{choices}
+\choice Generirana števila sledijo Gaussovi porazdelitvi in so vedno pozitivna.
+\choice Algoritem je zelo hiter in porabi malo pomnilnika.
+\correctchoice Števila so porazdeljena po enakomerni porazdelitvi in so nekorelirana.
+\choice Zaporedje je kratko in hitro ponovljivo.
+\end{choices}
+
+\question Kaj je najpogostejši vir za določitev začetnega semena, če ga uporabnik ne določi?
+\begin{choices}
+\choice Prvo število, ki ga uporabnik vnese preko tipkovnice.
+\correctchoice Trenutni sistemski čas, npr.\ odčitek notranje ure v milisekundah.
+\choice Vrednost števila pi.
+\choice Vnaprej določeno število, enako za vse računalnike.
+\end{choices}
+
+\question Katere tri parametre sprejme funkcija \verb|numpy.random.normal()|?
+\begin{choices}
+\choice Število poskusov, verjetnost uspeha in število števil.
+\correctchoice Povprečno vrednost, standardni odklon in število števil.
+\choice Stopnjo, obliko in število števil.
+\choice Spodnjo mejo, zgornjo mejo in število števil.
+\end{choices}
+
+\question Katera metoda uporablja veliko število naključnih števil za reševanje determinističnih problemov?
+\begin{choices}
+\choice Optimizacija z naključnim iskanjem.
+\choice Analiza meritev in napak.
+\correctchoice Monte Carlo metode.
+\choice Inverzna transformacijska metoda.
+\end{choices}
+
+\question Kdaj je priporočljivo odstraniti \verb|numpy.random.seed()| iz končne različice programa?
+\begin{choices}
+\correctchoice Ko je program preizkušen in želimo, da ob vsakem zagonu ustvari novo, neponovljivo zaporedje naključnih števil.
+\choice Ko program deluje prepočasi, saj določanje semena upočasni izvajanje.
+\choice Samo takrat, ko uporabljamo porazdelitve, ki niso enakomerne.
+\choice Nikoli, saj vedno zagotavlja boljšo naključnost.
+\end{choices}
+
+\question Katera trditev najbolje povzema uporabo naključnih števil pri simulacijah?
+\begin{choices}
+\correctchoice Uporabljajo se za modeliranje pojavov, kjer ima naključnost ključno vlogo.
+\choice Služijo iskanju optimalnih parametrov tehničnih sistemov.
+\choice Namen je ocena merilnih napak.
+\choice Uporabljajo se za reševanje analitično težkih, a determinističnih problemov.
+\end{choices}
+
+\question Zakaj se v testiranju uporabi \verb|numpy.random.seed(N)|?
+\begin{choices}
+\choice Poveča hitrost generiranja naključnih števil.
+\choice Za generiranje bolj kakovostnih naključnih števil.
+\correctchoice Da program ob vsakem zagonu ustvari identično zaporedje naključnih števil.
+\choice Da omeji obseg generiranih števil med 0 in N.
+\end{choices}
+
+\question Kaj pomeni, da so psevdonaključna števila določena z determinističnim procesom?
+\begin{choices}
+\choice Računalnik uporablja kvantnomehanske procese.
+\choice Števila so le približki realnih števil.
+\correctchoice Zaporedje števil je vnaprej določeno z začetnim semenom.
+\choice Zaporedja se ponavljajo že po nekaj tisoč številih.
+\end{choices}
+
+\question Kateri numpy ukaz generira polje 10 števil, ki sledijo binomski porazdelitvi?
+\begin{choices}
+\choice numpy.random.normal(n,p,10)
+\correctchoice numpy.random.binomial(n,p,10)
+\choice numpy.random.poisson(10)
+\choice numpy.random.rand(10)
+\end{choices}
+
+\question Za katero nalogo je Monte Carlo najbolj primeren?
+\begin{choices}
+\choice Reševanje sistema linearnih enačb.
+\choice Razvrščanje podatkov.
+\choice Iskanje besede v besedilu.
+\correctchoice Izračun števila $\pi$ z naključnimi točkami v kvadratu.
+\end{choices}
+
+\question Kaj je namen dodajanja naključnega šuma v simulaciji meritev?
+\begin{choices}
+\choice Pospešiti zbiranje podatkov.
+\correctchoice Oceniti negotovost meritve zaradi napak posameznih meritev.
+\choice Odpraviti vse meritvene napake.
+\choice Preveriti delovanje inštrumentov.
+\end{choices}
+
+\question Na kateri funkciji temelji inverzna transformacijska metoda?
+\begin{choices}
+\choice Standardnem odklonu.
+\choice Gostoti verjetnosti (PDF).
+\choice Karakteristični funkciji.
+\correctchoice Kumulativni porazdelitveni funkciji (CDF).
+\end{choices}
+
+\question Zakaj je optimizacija z majhnimi naključnimi odmiki boljša od slepega iskanja?
+\begin{choices}
+\choice Ker vedno najde globalni optimum.
+\choice Ker je računsko manj zahtevna.
+\choice Ker ne potrebuje začetne rešitve.
+\correctchoice Ker raziskuje okolico dobre rešitve namesto celotnega prostora.
+\end{choices}
+
+\question Kateri pojav bi modelirali z naključnim generiranjem?
+\begin{choices}
+\choice Delovanje logičnih vrat v procesorju.
+\choice Izračun vsote prvih 100 števil.
+\choice Gibanje planeta okoli Sonca.
+\correctchoice Jedrski razpad, kjer je čas razpada nepredvidljiv.
+\end{choices}
+
+\end{questions}
+
+\newpage
+
+\section*{Naloga: Naključna števila}
+
+Prosim, oddajte Jupyter Notebook datoteko z opravljenimi naslednjimi nalogami:
+\begin{enumerate}
+\item     Napišite program, ki s pomočjo Monte Carlo metode izračuna površino med x-osjo in parabolo z enačbo $𝑦=1−𝑥^2$ 
+med -1 in 1.
+\item Za zgornjo parabolo zgenerirajte signal s šumom in poiščite parabolo, ki se ji najbolj prilega.
+\item Podobno kot v prejšnji nalogi, vendar namesto, da šum generirate po normalni porazdelitvi, uporabite Poissonovo in/ali eksponentno porazdelitev.
+\item {\em Dodatno:} Napišite program za vajo deljenja števil do 100 (»obratna poštevanka«).
+
+\end{enumerate}
+
+
+
+
+\end{document}
