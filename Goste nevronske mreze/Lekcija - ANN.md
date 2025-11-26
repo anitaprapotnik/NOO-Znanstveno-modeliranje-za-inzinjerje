@@ -74,8 +74,7 @@ Prej opisani postopek ima eno pomembno pomanjkljivost, ki bi jo matematiki hitro
 
 Na primeru bomo razložili, kaj to pomeni.
 Predpostavimo, da imamo nevronsko mrežo z naslednjo arhitekturo: v vhodni plasti sta dve vozlišči, v skriti plasti prav tako dve vozlišči, 
-v izhodni plasti pa eno vozlišče. Uteži med prvo in drugo plastjo označimo z $w_1$, uteži med drugo in tretjo plastjo pa z $w_2$
-.
+v izhodni plasti pa eno vozlišče. Uteži med prvo in drugo plastjo označimo z $w_1$, uteži med drugo in tretjo plastjo pa z $w_2$.
 
 Vrednosti vozlišč v skriti plasti sta torej:
 
@@ -89,7 +88,7 @@ $(w^2_{1,1}w^1_{1,1}+w^2_{1,2}w^1_{2,1})I_1+(w^2_{1,1}w^1_{1,2}+w^2_{1,2}w^1_{2,
 
 Vidimo torej, da je skrita plast brez pomena, saj bi z ustrezno izbiro uteži enak rezultat dobili že, če bi vhodno plast neposredno povezali z izhodno.
 
-Da to preprečimo, na vrednosti v vsakem vozlišču uporabimo nelinearno funkcijo, ki jo imenujemo aktivacijska funkcija.
+Da to preprečimo, na vrednosti v vsakem vozlišču uporabimo nelinearno funkcijo, ki jo imenujemo aktivacijska funkcija. Najbolj pogosto uporabljane aktivacijske funkcije so zbrane v priloženi datoteki tabele.pdf
 
  # Priprava podatkov
 Čeprav nevronske mreže lahko obdelujejo različne vrste podatkov, kot so slike, videoposnetki in besedilo, se bomo tukaj osredotočili le na pripravo preprostih številskih podatkov in kategorij.
@@ -116,9 +115,59 @@ rumena → (0, 0, 1)
 
 Cela števila pa uporabljamo le takrat, kadar med podatki res obstaja vrstni red ali hierarhija (npr. končana osnovna, srednja ali visoka šola).
 
+# Ocena napake - stroškovna funkcija
+V naslednjem koraku mora model nevronske mreže prilagoditi uteži in odmike, da se izhod čim bolje prilagodi pričakovanim vrednostim. Da bi to dosegli, potrebujemo najprej mero napake - 
+tako imenovano stroškovno funkcijo, ki je odvisna od vrste podatkov, s katerimi delamo. Poglejmo, katere napake uporabljamo v primeru zveznih podatkov in v primeru kategorialnih podatkov.
+Zvezni podatki
+
+V primeru zveznih podatkov uporabljamo varianco oziroma povprečno kvadratno napako.
+
+Enačba:
+
+$𝑀𝑆𝐸=\frac{1}{𝑁}\sum^𝑁_{𝑖=0}(𝑦_𝑖−\hat{𝑦}_𝑖)^2$,
+
+kjer je $𝑦_𝑖$ dejanska vrednost, $\hat{𝑦}_𝑖$ napoved modela in N število vzorcev. 
+
+Opomba: varianca je občutljiva na izstopajoče vrednosti. Če želimo zmanjšati to občutljivost, lahko izberemo drug način ocenjevanja napake.
+Klasifikacija
+
+V primeru klasifikacije, ko je rezultat podan z one-hot zapisom, uporabljamo križno entropijo (ang. cross entropy).
+
+Enačba:
+
+$𝐻=−\sum^N_{𝑖=1} \sum^𝐶_{𝑐=1} 𝑦_{𝑖,𝑐} \log(\hat 𝑦_{𝑖,𝑐})$,
+
+kjer je  N število vzorcev, C število razredov, $𝑦_{𝑖,𝑐}$ dejanska vrednost in $\hat 𝑦_{𝑖,𝑐}$ napoved modela.
+
+Primer:
+Recimo, da je pravi razred druga kategorija — v one-hot zapisu torej $𝑦=[0,1,0]$.
+
+Če model napove verjetnosti razredov $\hat 𝑦 =[0.7,0.2,0.1]$, ima križna entropija vrednost:
+
+$𝐻=−[0 \cdot 𝑙𝑜𝑔 (0.7)+1 \cdot 𝑙𝑜𝑔 (0.2)+0\cdot 𝑙𝑜𝑔 (0.1)]=− 𝑙𝑜𝑔 (0.2)=1.609$
+
+Če pa model napove verjetnosti $\hat{y} =[0.1,0.8,0.1]$, dobimo:
+
+$𝐻=−[0\cdot 𝑙𝑜𝑔 (0.1)+1\cdot 𝑙𝑜𝑔 (0.8)+0\cdot 𝑙𝑜𝑔 (0.1)]=− 𝑙𝑜𝑔 (0.8)=0.223$
+
+Večja kot je verjetnost, ki jo model pripiše pravemu razredu, manjša je vrednost križne entropije.
+
+Druga možnost je uporaba redke križne entropije, ki je matematično enaka križni entropiji, vendar preverja le verjetnost pravega razreda — torej ni potrebno uporabiti celotnega one-hot zapisa.
+
+Enačba se poenostavi v:  $𝐻=− 𝑙𝑜𝑔 (\hat y)$.
+
+V prvem primeru, ko je napoved $\hat 𝑦 =[0.7,0.2,0.1]$, preverjamo samo verjetnost za pravi razred (0.2) in dobimo:
+
+$𝐻=− 𝑙𝑜𝑔 (0.2)=1.609$,
+
+Katero možnost — križno entropijo ali redko križno entropijo — bomo uporabili v programu, je odvisno od načina, kako imamo podane (zapisane) prave oziroma pričakovane vrednosti kategorij.
+
+Podrobnejši seznam stroškovnih funkcij je podan v priloženi datoteki tabele.pdf.
+
+
 # Proces učenja - optimizacija
 Ko enkrat določimo oceno napake (t. i. stroškovno funkcijo), lahko pristopimo k optimizaciji. Osnovna ideja optimizacijskega procesa je poiskati minimum napake. To storimo tako, da izračunamo (parcialne) 
-odvode napake po utežeh in odmikih ter tako dobimo smer, v katero se moramo premakniti, da se približamo minimumu
+odvode napake po utežeh in odmikih ter tako dobimo smer, v katero se moramo premakniti, da se približamo minimumu.
 
 
 
@@ -147,7 +196,7 @@ Deluje zelo dobro pri nepostojnih problemih, kot so nevronske mreže, kjer se gr
   - Adam (Adaptive Moment Estimation) – izračuna povprečje gradientov in njihovih kvadratov, kar omogoča hitrejše in stabilnejše učenje. Je ena najpogosteje uporabljenih metod danes, saj dobro deluje v večini
 primerov brez veliko prilagajanja.
 
-Natančnejši opisi optimizacijskih funkcij so zbrani v tabeli optimizatorji.pdf.
+Natančnejši opisi optimizacijskih funkcij so zbrani v tabele.pdf.
 
  # Učenje in validacija
 Pri procesu učenja nevrosnka mreža prejema podatke in glede na izbrano metodo optimizacije prilagaja uteži. Ves čas spremljamo napako (stroškovno funkcijo). Ko opazimo, da napaka doseže plato in se ne zmanjšuje, 
@@ -172,4 +221,4 @@ Problem rešujemo tako, da prilagodimo arhitekturo (število plasti, število vo
 Natančnost natrenirane mreže skoraj nikoli ni 100 %. Naš cilj je, da se ji čim bolj približamo. To dosežemo s prilagajanjem arhitekture. Pravega pravila ni — običajno moramo preizkusiti več možnosti in oceniti, 
 katera prinese najboljše rezultate.
 
-Natančnejši seznam možnih metrik je zbran v tabeli metrike.pdf.
+Natančnejši seznam možnih metrik je zbran v tabele.pdf.
