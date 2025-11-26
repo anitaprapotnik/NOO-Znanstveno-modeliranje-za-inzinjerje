@@ -1,0 +1,182 @@
+\documentclass[12pt]{exam}
+\usepackage[slovene]{babel}
+\usepackage{graphicx}
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage{pgfplots}
+
+%\usepackage{arev}
+%\usepackage[T1]{fontenc}
+
+
+%\renewcommand*\rmdefault{iwona}
+
+%\renewcommand*{\familydefault}{\rmdefault}
+%\renewcommand*{\familydefault}{\sfdefault}
+%\renewcommand*{\familydefault}{\ttdefault}
+
+%\textwidth 16 true cm
+%\textheight 27 true cm
+%\oddsidemargin 30 true mm
+%\evensidemargin 20 true mm
+%\voffset= -18 true mm
+%\hoffset= -25 true mm
+
+
+\printanswers
+
+\begin{document}
+\pagestyle{empty}
+
+\section*{Kviz: CNN}
+\begin{questions}
+
+\question Zakaj so konvolucijske nevronske mreže (CNN) na splošno bolj primerne za obdelavo slik kot gosto povezane mreže?
+\begin{choices}
+\choice Ker vsak vhodni piksel povežejo z nevronom v prvi plasti, kar omogoča bolj celovito analizo.
+\choice Ker za svoje delovanje ne potrebujejo aktivacijskih funkcij.
+\correctchoice Ker ohranjajo prostorsko razporeditev pikslov in upoštevajo njihovo medsebojno lego.
+\choice Ker imajo manj plasti in so zato računsko hitrejše.
+\end{choices}
+
+\question Kakšna je razlika v delovanju med \emph{max pooling} in \emph{average pooling} plastjo?
+\begin{choices}
+\choice Max pooling se uporablja samo za barvne slike, average pooling pa za črno-bele.
+\choice Max pooling poveča velikost slike, average pooling pa jo zmanjša.
+\correctchoice Max pooling izpostavi najmočnejši signal, medtem ko average pooling podatke bolj izravna.
+\choice Max pooling izračuna povprečne vrednosti, average pooling pa izbere največjo.
+\end{choices}
+
+
+\question Kateri korak je opisan v postopku prilagajanja pred-učeneega VGG modela za lastne potrebe?
+\begin{choices}
+\correctchoice Odstranitev zadnje klasifikacijske plasti in njena zamenjava s plastjo, prilagojeno našemu številu kategorij.
+\choice Odstranitev vseh konvolucijskih plasti in ohranitev samo gosto povezanih.
+\choice Zamenjava prve konvolucijske plasti z novo, prilagojeno velikosti naših slik.
+\choice Povečanje števila filtrov v vseh konvolucijskih plasteh za dvakrat.
+\end{choices}
+
+
+\question Kaj pomeni izraz »deljenje uteži« (weight sharing) pri konvolucijski plasti?
+\begin{choices}
+\choice Da več različnih filtrov v isti plasti uporablja enake uteži za iskanje različnih značilnosti.
+\choice Da se uteži filtra razdelijo med vse nevrone v naslednji plasti.
+\correctchoice Da en in isti filter (z istimi utežmi) drsi po celotni sliki in se uporablja na različnih lokacijah.
+\choice Da se uteži iz ene konvolucijske plasti delijo z utežmi v naslednji pooling plasti.
+\end{choices}
+
+
+\question Kateri podatkovni nabor je tako obsežen, da zaradi licenčnih omejitev ni več prosto dostopen prek Kerasa?
+\begin{choices}
+\choice MNIST
+\correctchoice ImageNet
+\choice KITTI Dataset
+\choice CIFAR-100
+\end{choices}
+
+
+\question V primeru iz besedila »Marko kosi travo, Mateja pa kosi juho«, kaj omogoča plast večglave pozornosti v transformerju?
+\begin{choices}
+\choice Popravi slovnično napako, če ta obstaja.
+\choice Prevede stavek v drug jezik.
+\correctchoice Ugotovi, da se glagol »kosi« nanaša na različne stvari in pravilno interpretira pomen.
+\choice Prepozna, da sta Marko in Mateja imeni oseb.
+\end{choices}
+
+
+\question Kakšna je tipična zgradba osnovne konvolucijske nevronske mreže?
+\begin{choices}
+\choice Samo zaporedje konvolucijskih plasti, ki vodijo neposredno do izhoda.
+\choice Goste plasti → sploščevanje → izmenično konvolucijska in pooling plast.
+\correctchoice Izmenično konvolucijska plast in plast za združevanje → sploščevanje → goste plasti.
+\choice Sploščevalna plast → goste plasti → konvolucijska plast.
+\end{choices}
+
+
+\question Kateri dve lastnosti sta ključni za delovanje konvolucijske plasti?
+\begin{choices}
+\choice Max pooling in average pooling.
+\choice Sploščevanje in gosta povezanost.
+\choice Dodajanje robov (padding) in korak (stride).
+\correctchoice Lokalna povezanost in deljenje uteži.
+\end{choices}
+
+\question Kateri je glavni namen plasti za združevanje (pooling layer) v CNN?
+\begin{choices}
+\choice Povečanje dimenzij podatkov za boljšo prepoznavo.
+\correctchoice Zmanjšanje količine podatkov ob ohranjanju najpomembnejših informacij.
+\choice Uporaba filtrov za iskanje robov in kontrastov.
+\choice Pretvorba večdimenzionalnih podatkov v enodimenzionalni vektor.
+\end{choices}
+
+
+\question Če želimo, da je izhodna slika po konvoluciji enake velikosti kot vhodna, katero strategijo dodajanja robov uporabimo?
+\begin{choices}
+\choice Circular padding
+\correctchoice Same padding
+\choice Valid padding
+\choice Full padding
+\end{choices}
+
+
+\question Kakšna je vloga sploščevalne plasti (Flatten layer) v arhitekturi CNN?
+\begin{choices}
+\correctchoice Pretvori podatke iz metrične oblike v enodimenzionalni vektor.
+\choice Združi majhne skupine podatkov v eno vrednost.
+\choice Izvede končno klasifikacijo slike.
+\choice Doda ničle okoli robov slike.
+\end{choices}
+
+
+\question Katera trditev najbolje opisuje arhitekturo VGG modelov?
+\begin{choices}
+\choice Uporablja velike 7×7 filtre.
+\correctchoice Zaporedja 3×3 konvolucijskih plasti, ki jim sledijo 2×2 max pooling plasti.
+\choice Število filtrov se z globino zmanjšuje.
+\choice Nimajo gosto povezanih plasti.
+\end{choices}
+
+
+\question Kateri podatkovni nabor je zbirka črno-belih, ročno pisanih številk velikosti 28×28 pikslov?
+\begin{choices}
+\correctchoice MNIST
+\choice ImageNet
+\choice CIFAR-10
+\choice Udacity Self-Driving Car Dataset
+\end{choices}
+
+
+\question Kaj je glavna značilnost transformer modelov, ki jih loči od CNN in gosto povezanih mrež?
+\begin{choices}
+\correctchoice Plast pozornosti (attention layer), ki tehta pomembnost različnih delov vhoda.
+\choice Izključna uporaba gosto povezanih plasti.
+\choice Sposobnost obdelave slik visoke ločljivosti.
+\choice Uporaba konvolucijskih filtrov za zaporedja.
+\end{choices}
+
+
+\question Kako deluje metoda dodajanja robov »mirror padding«?
+\begin{choices}
+\choice Okoli robov doda piksle z vrednostjo nič.
+\choice Podatke obravnava ciklično.
+\choice Odreže robne piksle.
+\correctchoice Zrcali vrednosti pikslov ob robu.
+\end{choices}
+
+
+\end{questions}
+
+\newpage
+\section*{Naloga: CNN}
+
+
+\begin{enumerate}
+\item   Uporabite podatkovno zbirko CIFAR-10 iz zgradite CNN, ki bo znal razpoznavati kategorije iz te knjižnice.
+\item   Poiščite nekaj slik iz interneta ali pa jih sami posnamite, da preverite delovanje modela na vaših slikah.
+\item {\em Dodatno:} Uporabite podatkovne zbirke, ki jih najdete na internetu ter oblikujte in strenirajte CNN model. Preverite kako se obnese pri razpoznavanju vaših slik ali slik z interneta.
+\end{enumerate}
+
+
+
+\end{document}
