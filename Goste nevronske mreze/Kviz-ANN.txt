@@ -1,0 +1,120 @@
+KATERI OD NASLEDNJIH OPISOV NAJBOLJE POVZEMA HIERARHIČNI ODNOS MED UMETNO INTELIGENCO (UI), NEVRONSKIMI MREŽAMI IN VELIKIMI JEZIKOVNIMI MODELI (LLM), KOT JE CHATGPT, GLEDE NA PRILOŽENO BESEDILO?
+A) Nevronske mreže so se razvile iz velikih jezikovnih modelov in predstavljajo osnovo za umetno inteligenco.
+B) Umetna inteligenca je zgolj teoretični koncept,  medtem ko so nevronske mreže in LLM praktične implementacije.
+C) UI, nevronske mreže in LLM so tri medsebojno ločena področja raziskav.
+D) Veliki  jezikovni modeli so podkategorija nevronskih mrež, te pa so podkategorija znotraj širšega področja umetne inteligence.
+ANSWER: D
+MODEL ZA KLASIFIKACIJO JE ZA PRAVILEN RAZRED (DRUGI OD TREH) NAPOVEDAL VERJETNOST 0.2. VREDNOST KRIŽNE ENTROPIJE JE BILA H=−LOG(0.2)=1.609. KAJ BI SE ZGODILO Z VREDNOSTJO KRIŽNE ENTROPIJE, ČE BI MODEL ZA ISTI PRIMER NAPOVEDAL VERJETNOST 0.8 ZA PRAVILEN RAZRED?
+A) Vrednost križne entropije bi se zmanjšala.
+B) Vrednost križne entropije bi se povečala.
+C) Vrednost križne entropije bi ostala enaka.
+D) Vrednost križne entropije bi postala negativna.
+ANSWER: A
+KATERA TRDITEV O ARHITEKTURI NEVRONSKE MREŽE JE PRAVILNA GLEDE NA BESEDILO?  
+A) V osnovni (gosti) arhitekturi, je vsako vozlišče povezano le z enim vožliščem sosednje plasti.
+B) Število skritih plasti in število vozlišč v njih je točno določeno s številom vhodnih plasti.
+C) Uteži so predpisani nevronom, odmiki pa povezavam med njimi.
+D) Nevronska mreža mora imeti vsaj eno vhodno, eno skrito in eno izhodno plast. 
+ANSWER: D
+KATERI OPTIMIZACIJSKI ALGORITEM VELJA ZA ENEGA NAJPOGOSTEJE UPORABLJENIH, SAJ DOBRO DELUJE V VEČINI PRIMEROV BREZ VELIKO PRILAGAJANJA IN IZRAČUNAVA POVPREČJE GRADIENTOV TER NJIHOVIH KVADRATOV?
+A) RMSProp
+B) Naključni gradientni spust (SGD)
+C) AdaGrad
+D) Adam
+ANSWER: D
+KAJ JE GLAVNA RAZLIKA MED STROŠKOVNO FUNKCIJO (NPR. MSE) IN METRIKO (NPR. NATANČNOST)?
+A) Ni nobene razlike, gre za sopomenki, ki se uporabljata za merjenje uspešnosti modela.
+B) Stroškovna funkcija ima vedno vrednost med 0 in 1, dokler metrika lahko zvazame poljubno vrednost.
+C) Metrika se uporablja za regresijske probleme, stroškovna funkcija pa za klasifikacije.
+D) Stroškovna funkcija se uporablja za prilagajanje uteži med učenjem, medtem kot metrika služi le za končno oceno uspešnosti  modela.
+ANSWER: D
+V BESEDILU JE OMENJENA ANALOGIJA ZA LAŽJE RAZUMEVANJE AKTIVACIJSKIH FUNKCIJ. S ČIM LAHKO SESTAVIMO POLJUBNO KRIVULJO, ČE NAM TO NE USPE S KOMBINACIJO CELIH PREMIC?
+A) S kombinacijo poltrakov.
+B) S kombinacijo točk.
+C) S kombinacijo sinusnih funkcij.
+D) S kombinacijo parabol.
+ANSWER: A
+KAJ JE 'BATCH SIZE' V KONTEKSTU UČENJA NEVRONSKE MREŽE?  
+A) Število epoh potrebnih za konvergenco modela.
+B) Skupno število podatkov, ki so na voljo za učenje.
+C) Število nevronov v največji skriti plasti.
+D) Velikost vzorca (število podatkov), ki gre skozi model, preden se uteži prilagodijo.
+ANSWER: D
+KDAJ JE UMETNA INTELIGENCA POSTALA SAMOSTOJNO RAZISKOVALNO PODROČJE ZNOTRAJ ZNANSTVENE SFERE?
+A) Po letu 2010, z vsponom velikih jezikovnih modelov.
+B) V osemdesetih letih, z razvojem nevronskih mrež.
+C) Leta 1956.
+D) V 19. stoletju z idejami Charlesa Babbagea.
+ANSWER: C
+KAJ JE NAMEN NORMALIZACIJE ZVEZNIH VHODNIH PODATKOV PRED UČENJEM NEVRONSKE MREŽE?
+A) Preslikava podatkov v manjši interval (npr. od 0 do 1), da imajo vsi vhodi primerljivo vrednost in se preprečijo numerične težave.
+B) Pretvorba podatkov v kategorije z uporabo one-hot kodiranja.
+C) Odstranitev izstopjaočih vrednosti (outlierjev) iz nabora podatkov.
+D) Povečanje števila učnih vzorcev, za boljše učenje.
+ANSWER: A
+KATERI PROBLEM BI BIL PRIMEREN ZA REŠEVANJE Z NEVRONSKO MREŽO, KOT JE OPISANO V PRIMERIH UPORABE V BESEDILU?  
+A) Shranjevanje velikih količin podatkov o strankah v struktuirano bazo podatkov.
+B) Izračun vsote prvih 1000 praštevil.
+C) Razvrščanje seznama imen po abecedi.
+D) Napovedovanje verjetnosti prometne nesreče na kržišču na podlagi gostote prometa, vidljivosti in lasnosti ceste. 
+ANSWER: D
+ČE ZA KLASIFIKACIJSKI PROBLEM Z VEČ RAZREDI UPORABIMO 'ONE-HOT' KODIRANJE ZA PRAVE VREDNOSTI, KATERO STROŠKOVNO FUNKCIJO MORAMO IZBRATI?
+A) Križno entropijo (cross-entropy)
+B) Redko križno entropijo (sparse cross-entropy)
+C) Adam
+D) Povprečno kvadratno napako (MSE)
+ANSWER: A
+ZAKAJ JE UPORABA AKTIVACIJSKIH FUNKCIJ, KOT JE RELU, KLJUČNEGA POMENA V ARHITEKTURI NEVRONSKIH MREŽ?
+A) Ker v mrežo vnesejo nelinearnosti, kar omogoča učenje kompleksnih vzorcev, ki jih z linearnimi kombinacijami ne bi mogli zajeti.
+B) Za določitev začetnih vrednosti uteži in odmikov v mreži.
+C) Za zmanjšanje števila potrebnih nevronov v skritih plasteh in s tem ponostavitev arhitekture.
+D) Za normalizacijo vhodnih podatkov, da imajo vsi primerljivo vrednost.
+ANSWER: A
+ČE JE NATANČNOST MODELA NA VALIDACIJSKIH PODATKIH PRECEJ NIŽJA KOT NA UČNIH PODATKIH, JE TO ZNAK ZA:
+A) Premalo epoh učenja.
+B) Prekomerno prilagajanje (overfitting).
+C) Napačno izbiro stroškovne funkcije.
+D) Uspešno posploševanje modela.
+ANSWER: B
+ČE NEVRONSKA MREŽA NAPOVEDUJE CENO NEPREMIČNINE (ZVEZNI PODATEK), KATERA STROŠKOVNA FUNKCIJA JE NAJPOGOSTEJE UPORABLJENA ZA MERJENJE NAPAKE MED NAPOVEDJO IN DEJANSKO VREDNOSTJO?
+A) Križna entopija
+B) Redka križna entropija
+C) Povprečna kvadratna napaka
+D) Funkcija ReLU
+ANSWER: C
+POJAV, KO SE NEVRONSKA MREŽA 'NA PAMET NAUČI' UČNE PODATKE IN ZATO SLABO POSPLOŠUJE NA NOVE, NEVIDENE PODATKE, IMENUJEMO:
+A) Prekomerno prilagajanje (overfitting)
+B) Validacija
+C) Gradientni spust
+D) Normalizacija
+ANSWER: A
+KAJ SE ZGODI, ČE JE HITROST UČENJA (LEARNING RATE) V PROCESU OPTIMIZACIJE NASTAVLJENA PREMAJHNO?
+A) Učenje bo zelo počasno in bo morda obtičalo v lokalnem minimumu.
+B) Uteži in odmiki se sploh ne bodo posodabljali.
+C) Model se bo takoj prekomerno prilagodil (overfitting).
+D) Model bo postal nestabilen in napaka bo močno nihala.
+ANSWER: A
+V VHODNI PLASTI NEVRONSKE MREŽE MORA BITI TOČNO TOLIKO VOZLIŠČ, KOLIKOR JE:  
+A) Epoh učenja.
+B) Skritih plasti v mreži.
+C) Vhodnih (neodvisnih) podatkov ali značilnosti.
+D) Izhodnih (odvisnih) spremenjlivk, ki jih želimo napovedat.
+ANSWER: C
+KAKŠNA JE VREDNOST IZRAZA \( A_{12}​=I_1​W_{1,1}​+I_2​W_{1,2}​+I_3​W_{1,3}​+B_{1} \), KI PREDSTAVLJA IZRAČUN V NEVRONU PRVE SKRITE PLASTI?
+A) Napaka napovedi, izračunana s povprečno kvadratno napako.
+B) Produkt vseh vhodnih vrednosti in vseh uteži.
+C) Rezultat aktivacijske funkcije ReLU.
+D) Vsota produktov vhodnih vrednosti in uteži, prišteta odmiku tega nevtrona.
+ANSWER: D
+KAJ JE GLAVNA POMANJKLJIVOST UPORABE CELOŠTEVILSKEGA KODIRANJA (NPR. RDEČA → 1, ČRNA → 2, RUMENA → 3) ZA KATEGORIALNE PODATKE, KI NIMAJO NARAVNEGA VRSTNEGA REDA?
+A) Postopek je računsko prezahteven za velike nabore podatkov.
+B) Zahteva preveč pomnilika v primerjavi z one-hot kodiranjem.
+C) Modelu umetno nakazuje zaporedje ali velikostni odnos, ki v resnici ne obstaja.
+D) Ni ga mogoče uporabiti za probleme z več kot dvema kategorijama.
+ANSWER: C
+KAKŠEN JE NAMEN VALIDACIJSKEGA NABORA PODATKOV V PROCESU UČENJA NEVRONSKE MREŽE?
+A) Da se na njem neposredno prilagajajo uteži in odmiki med vsako epoho.
+B) Da se z njimi določi optimalno število skritih plasti pred začetkom učenja.
+C) Da se oceni, kako se bo model obnesel na novih, še nevidenih podatkih.
+D) Da se vanj shranijo najboljše uteži po vsaki epohi.
+ANSWER: C
