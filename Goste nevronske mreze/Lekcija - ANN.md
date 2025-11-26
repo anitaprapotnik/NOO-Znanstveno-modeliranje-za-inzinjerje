@@ -202,7 +202,7 @@ Natančnejši opisi optimizacijskih funkcij so zbrani v tabele.pdf.
 Pri procesu učenja nevrosnka mreža prejema podatke in glede na izbrano metodo optimizacije prilagaja uteži. Ves čas spremljamo napako (stroškovno funkcijo). Ko opazimo, da napaka doseže plato in se ne zmanjšuje, 
 lahko sklepamo, da se je model naučil.
 
-***Parametri procesa učenja: ***
+***Parametri procesa učenja:***
 
  - Število epoh učenja – določa, kolikokrat model preide skozi celoten nabor podatkov (ena epoha pomeni en prehod podatkov). Običajno ni dovolj, da model podatke "vidi" le enkrat; za uspešno učenje jih
  moramo večkrat prevleči skozi mrežo. Po vsakem prehodu je priporočljivo podatke naključno premešati.
@@ -221,4 +221,4 @@ Problem rešujemo tako, da prilagodimo arhitekturo (število plasti, število vo
 Natančnost natrenirane mreže skoraj nikoli ni 100 %. Naš cilj je, da se ji čim bolj približamo. To dosežemo s prilagajanjem arhitekture. Pravega pravila ni — običajno moramo preizkusiti več možnosti in oceniti, 
 katera prinese najboljše rezultate.
 
-Natančnejši seznam možnih metrik je zbran v tabele.pdf.
+Natančnejši seznam možnih metrik je zbran v datoteki tabele.pdf.
