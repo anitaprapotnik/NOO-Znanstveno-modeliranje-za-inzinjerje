@@ -61,8 +61,6 @@ generira naključna števila, porazdeljena po binomski porazdelitvi;
  - numpy.random.exponential(povp, N)
 generira naključna števila, porazdeljena po eksponentni porazdelitvi.
 
-Lastnosti in uporaba posameznih porazdelitev so prikazane v datoteki porazdelitve.pdf.
-
  ## Dodatni koristni ukazi
 Knjižnica numpy.random ponuja še nekaj uporabnih ukazov za delo z naključnimi števili:
 
@@ -75,3 +73,5 @@ premeša vrstni red elementov v danem nizu (arrayu ali seznamu);
  - numpy.random.multivariate_normal(povp, cov, N)
 generira N večrazsežnih (npr. dvo- ali večdimenzionalnih) naključnih števil, porazdeljenih po večspremenljivčni normalni porazdelitvi, 
 pri čemer so posamezne spremenljivke med seboj korelirane (odvisne glede na podano kovariančno matriko cov).
+
+Seznam ukazov knjižnice numpy.random je v priloženi pdf datoteki (random.pdf)
